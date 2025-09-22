@@ -194,24 +194,4 @@ function cancelForm() {
 }
 </script>
 </body>
-</html>�डर यशस्वीरीत्या सबमिट झाली ✅", "success");
-
-      if ((morningStock<=0 && time==="सकाळ") || (eveningStock<=0 && time==="संध्याकाळ")) disableForm("स्टॉक संपला आहे.");
-    }
-
-    function disableForm(msg) {
-      showNotification(msg, "error");
-      const formElements = document.getElementById("orderForm").elements;
-      for (let i=0;i<formElements.length;i++) formElements[i].disabled=true;
-    }
-
-    function cancelForm() {
-      document.getElementById("orderForm").reset();
-      document.getElementById("totalBill").innerText = "एकूण बिल: ₹0";
-      resetStockIfNewDay();
-    }
-
-    window.onload = resetStockIfNewDay;
-  </script>
-</body>
 </html>
